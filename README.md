@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## React JS prject starter link
+https://reactjs.org/docs/create-a-new-react-app.html
+
+npx create-react-app my-app
+
+
 ## Available Scripts
 
 In the project directory, you can run:
