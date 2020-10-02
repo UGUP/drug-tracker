@@ -36,7 +36,7 @@ class Login extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSignIn.bind(this)}>
-                <h3>Sign in</h3>
+                <h3>Login in</h3>
                 <label for="cars">Choose Role:</label>
                 <select name="cars" id="cars" onChange={this.handleRoleSelection.bind(this)}>
                     <option value="admin">Admin</option>

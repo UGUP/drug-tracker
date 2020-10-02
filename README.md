@@ -72,3 +72,20 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
+React Component
+-> State [Data, Local with in compoent]
+-> Properties [Data, Global outside of the compent]
+
+Lifecycle
+1.
+2.
+3.
+4.
+
+
+render() {
+    return JSX; [HTML + JS]
+}
