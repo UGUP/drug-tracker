@@ -6,20 +6,35 @@ import ViewPurchaseOrderForm from "./ViewPurchaseOrderForm";
 import CreateShipmentForm from "./CreateShipmentForm";
 import ViewShipmentForm from "./ViewShipmentForm";
 import ViewDrugLifeCycleForm from "./ViewShipmentForm";
+import FormDialog from './DialogExample';
+import Button from '@material-ui/core/Button';
+import CreateDrugForm2 from './CreateDrugForm2'
 
 class ManufacturerDashboard extends React.Component {
+  
   constructor(props) {
-    super(props);
+    super();
     console.log(JSON.stringify(props, null, 2));
     // Here we initialize our components state
     this.state = {
       showForm: false,
     };
     this.handleClick = this.handleClick.bind(this);
+    this.onDialogClosed = this.onDialogClosed.bind(this);
   }
 
-  handleClick(showForm) {
-    this.state.showForm = true;
+  handleClick() {
+    console.log("Setting show form to true");
+    this.setState({
+      showForm: true
+   })
+  }
+
+  onDialogClosed() {
+    console.log("On Dialog Closed");
+    this.setState({
+      showForm: false
+   })
   }
 
   render() {
@@ -28,10 +43,12 @@ class ManufacturerDashboard extends React.Component {
       <div>
         <p>Manufacturer Dashboard</p>
         <div>
-          <CreateDrugForm />
-        </div>
-        <div>
-          <CreateShipmentForm />
+        <Button variant="outlined" color="primary" onClick={this.handleClick}>
+          Open form dialog
+        </Button>
+        <CreateDrugForm2 
+          openCreateDrugForm={this.state.showForm}
+          onDialogClosed={this.onDialogClosed}/>
         </div>
       </div>
     );
