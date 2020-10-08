@@ -10,7 +10,12 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 export default class Registerorganization extends React.Component {
   constructor(props) {
     super();
-    console.log(JSON.stringify(props, null, 2));
+    this.state = {
+      companyCRN: "",
+      companyName: "",
+      location: "",
+      organizationRole: "manufacturer"
+    }
   }
 
   componentDidMount() {
@@ -36,6 +41,10 @@ export default class Registerorganization extends React.Component {
               id="companyCRN"
               label="Company CRN"
               type="email"
+              onChange={event => {
+                const { value } = event.target;
+                this.setState({ companyCRN: value });
+              }}
               fullWidth
             />
             <TextField
@@ -44,6 +53,10 @@ export default class Registerorganization extends React.Component {
               id="companyName"
               label="Company Name"
               type="email"
+              onChange={event => {
+                const { value } = event.target;
+                this.setState({ companyName: value });
+              }}
               fullWidth
             />
             <TextField
@@ -52,22 +65,18 @@ export default class Registerorganization extends React.Component {
               id="Location"
               label="Location"
               type="email"
-              fullWidth
-            />
-            <TextField
-              autoFocus
-              margin="dense"
-              id="organisationRole"
-              label="OrganisationRole"
-              type="email"
+              onChange={event => {
+                const { value } = event.target;
+                this.setState({ location: value });
+              }}
               fullWidth
             />
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.props.onDialogClosed} color="primary">
+            <Button onClick={() => this.props.onDialogClosed(this.state)} color="primary">
               Cancel
             </Button>
-            <Button onClick={this.props.onDialogClosed} color="primary">
+            <Button onClick={() => this.props.onDialogClosed(this.state)} color="primary">
               Create Organization
             </Button>
           </DialogActions>

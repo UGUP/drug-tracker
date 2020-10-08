@@ -75,7 +75,7 @@ class AdminDashboard extends React.Component {
             }
           })()}
         </StyleDiv>
-        <StyleDiv>
+        {/* <StyleDiv>
           <Button variant="outlined" color="primary" onClick={this.handleClick}>
             Create Organization
           </Button>
@@ -83,7 +83,7 @@ class AdminDashboard extends React.Component {
             openCreateOrganizationDialogue={this.state.showForm}
             onDialogClosed={this.onDialogClosed}
           />
-        </StyleDiv>
+        </StyleDiv> */}
       </StyleDiv>
     );
   }
