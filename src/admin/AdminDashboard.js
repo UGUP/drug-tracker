@@ -7,6 +7,18 @@ import TransporterList from "./TransporterList";
 import Button from "@material-ui/core/Button";
 import RetailerList from "./RetailerList";
 import RegisterOrganization from "../DialogueForms/Registerorganization";
+import styled from "styled-components";
+
+const StyleDiv = styled.div`
+  width: 90%;
+  length: 100%;
+  max-width: 100rem;
+  margin: 2rem auto;
+  border: 8px solid #ccc;
+  padding: 2rem;
+  background: lightpink;
+  font-size: 21px;
+`;
 
 class AdminDashboard extends React.Component {
   constructor(props) {
@@ -43,11 +55,11 @@ class AdminDashboard extends React.Component {
 
   render() {
     return (
-      <div style={{ display: "flex" }}>
-        <div style={{ width: "30%" }}>
+      <StyleDiv style={{ display: "flex" }}>
+        <StyleDiv style={{ width: "30%" }}>
           <AdminMenu selectMenu={this.selectMenu} />
-        </div>
-        <div style={{ width: "70%" }}>
+        </StyleDiv>
+        <StyleDiv style={{ width: "70%" }}>
           {(() => {
             switch (this.state.selectmenu) {
               case "manufacturer":
@@ -62,8 +74,8 @@ class AdminDashboard extends React.Component {
                 return <ManufacturerList />;
             }
           })()}
-        </div>
-        <div>
+        </StyleDiv>
+        <StyleDiv>
           <Button variant="outlined" color="primary" onClick={this.handleClick}>
             Create Organization
           </Button>
@@ -71,8 +83,8 @@ class AdminDashboard extends React.Component {
             openCreateOrganizationDialogue={this.state.showForm}
             onDialogClosed={this.onDialogClosed}
           />
-        </div>
-      </div>
+        </StyleDiv>
+      </StyleDiv>
     );
   }
 }

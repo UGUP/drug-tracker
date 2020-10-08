@@ -5,6 +5,19 @@ import Button from "@material-ui/core/Button";
 import CreateShipmentDialogue from "../DialogueForms/CreateShipmentDialogue";
 import ViewShipmentDialogue from "../DialogueForms/ViewShipmentDialogue";
 import UpdateShipmentDialogue from "../DialogueForms/UpdateShipmentDialogue";
+import styled from "styled-components";
+
+const StyleDiv = styled.div`
+  width: 90%;
+  length: 100%;
+  max-width: 100rem;
+  margin: 2rem auto;
+  border: 8px solid #ccc;
+  padding: 2rem;
+  background: lightgreen;
+  font-size: 21px;
+`;
+
 class TransporterDashboard extends React.Component {
   constructor(props) {
     super();
@@ -72,9 +85,9 @@ class TransporterDashboard extends React.Component {
   render() {
     const { showForm } = this.state;
     return (
-      <div>
+      <StyleDiv>
         <p> Transporter Dashboard</p>
-        <div>
+        <StyleDiv>
           <Button
             variant="outlined"
             color="primary"
@@ -86,8 +99,8 @@ class TransporterDashboard extends React.Component {
             openCreateShipmentDialogue={this.state.showCreateShipmentForm}
             onDialogClosed={this.onCreateShipmentDialogClosed}
           />
-        </div>
-        <div>
+        </StyleDiv>
+        <StyleDiv>
           <Button
             variant="outlined"
             color="primary"
@@ -99,8 +112,8 @@ class TransporterDashboard extends React.Component {
             openViewShipmentDialogue={this.state.showViewShipmentForm}
             onDialogClosed={this.onViewShipmentDialogClosed}
           />
-        </div>
-        <div>
+        </StyleDiv>
+        <StyleDiv>
           <Button variant="outlined" color="primary" onClick={this.handleClick}>
             Update Shipment
           </Button>
@@ -108,8 +121,8 @@ class TransporterDashboard extends React.Component {
             openUpdateShipmentDialogue={this.state.showUpdateForm}
             onDialogClosed={this.onDialogClosed}
           />
-        </div>
-      </div>
+        </StyleDiv>
+      </StyleDiv>
     );
   }
 }

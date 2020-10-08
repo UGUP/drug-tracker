@@ -1,12 +1,8 @@
-import React from 'react';
+import React from "react";
 
 class ManufacturerList extends React.Component {
-    render() {
-       return (
-          <div>
-             Manufacturer List
-          </div>
-       )
-    }
- }
- export default ManufacturerList;
+  render() {
+    return <div>Click on Left to display a List</div>;
+  }
+}
+export default ManufacturerList;

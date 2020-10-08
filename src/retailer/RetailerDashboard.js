@@ -6,6 +6,18 @@ import ViewPurchaseOrderDialogue from "../DialogueForms/ViewPurchaseOrderDialogu
 import ViewDrugLifeCycle from "../DialogueForms/ViewDrugLifeCycle";
 import CreatePurchaseOrderDialogue from "../DialogueForms/CreatePurchaseOrderDialogue";
 import RetailDrugDialogue from "../DialogueForms/RetailDrugDialogue";
+import styled from "styled-components";
+
+const StyleDiv = styled.div`
+  width: 90%;
+  length: 100%;
+  max-width: 100rem;
+  margin: 2rem auto;
+  border: 8px solid #ccc;
+  padding: 2rem;
+  background: lightblue;
+  font-size: 21px;
+`;
 
 class RetailerDashboard extends React.Component {
   constructor(props) {
@@ -87,9 +99,9 @@ class RetailerDashboard extends React.Component {
   render() {
     const { showForm } = this.state;
     return (
-      <div>
+      <StyleDiv>
         <p> Retailer Dashboard</p>
-        <div>
+        <StyleDiv>
           <Button
             variant="outlined"
             color="primary"
@@ -101,8 +113,8 @@ class RetailerDashboard extends React.Component {
             openRetailDrugDialogue={this.state.showDrugDetailsForm}
             onDialogClosed={this.onRetailDrugClosed}
           />
-        </div>
-        <div>
+        </StyleDiv>
+        <StyleDiv>
           <Button variant="outlined" color="primary" onClick={this.handleClick}>
             Create Purchase Order
           </Button>
@@ -110,8 +122,8 @@ class RetailerDashboard extends React.Component {
             openCreatePurchaseOrderDialogue={this.state.showForm}
             onDialogClosed={this.onDialogClosed}
           />
-        </div>
-        <div>
+        </StyleDiv>
+        <StyleDiv>
           <Button
             variant="outlined"
             color="primary"
@@ -123,8 +135,8 @@ class RetailerDashboard extends React.Component {
             openPurchaseOrderDialogue={this.state.showViewPurchaseOrderForm}
             onDialogClosed={this.onPOHistoryDialogClosed}
           />
-        </div>
-        <div>
+        </StyleDiv>
+        <StyleDiv>
           <Button
             variant="outlined"
             color="primary"
@@ -136,8 +148,8 @@ class RetailerDashboard extends React.Component {
             openDrugLifecycleDialogue={this.state.showDrugLifeCycleForm}
             onDialogClosed={this.drugLifeCycleDialogClosed}
           />
-        </div>
-      </div>
+        </StyleDiv>
+      </StyleDiv>
     );
   }
 }
