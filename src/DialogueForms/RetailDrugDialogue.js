@@ -11,6 +11,13 @@ export default class RetailDrugDialogue extends React.Component {
   constructor(props) {
     super(props);
     console.log(JSON.stringify(props, null, 2));
+    this.state = {
+      drugName: "",
+      sno: "",
+      mDate: "",
+      eDate: "",
+      companyCrn: ""
+    }
   }
 
   componentDidMount() {
@@ -36,6 +43,10 @@ export default class RetailDrugDialogue extends React.Component {
               margin="dense"
               id="DrugName"
               label="DrugName"
+              onChange={event => {
+                const { value } = event.target;
+                this.setState({ drugName: value });
+              }}
               type="email"
               fullWidth
             />
@@ -44,6 +55,10 @@ export default class RetailDrugDialogue extends React.Component {
               margin="dense"
               id="SerialNo"
               label="SerialNo"
+              onChange={event => {
+                const { value } = event.target;
+                this.setState({ sno: value });
+              }}
               type="email"
               fullWidth
             />
@@ -52,6 +67,23 @@ export default class RetailDrugDialogue extends React.Component {
               margin="dense"
               id="retailerCRN"
               label="RetailerCRN"
+              onChange={event => {
+                const { value } = event.target;
+                this.setState({ mDate: value });
+              }}
+              type="email"
+              fullWidth
+            />
+
+            <TextField
+              autoFocus
+              margin="dense"
+              id="OrganizationRole"
+              label="OrganizationRole"
+              onChange={event => {
+                const { value } = event.target;
+                this.setState({ eDate: value });
+              }}
               type="email"
               fullWidth
             />
@@ -60,14 +92,10 @@ export default class RetailDrugDialogue extends React.Component {
               margin="dense"
               id="customerAadhar"
               label="customerAadhar"
-              type="email"
-              fullWidth
-            />
-            <TextField
-              autoFocus
-              margin="dense"
-              id="OrganizationRole"
-              label="OrganizationRole"
+              onChange={event => {
+                const { value } = event.target;
+                this.setState({ companyCRN: value });
+              }}
               type="email"
               fullWidth
             />

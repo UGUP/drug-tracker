@@ -6,6 +6,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
+import InputLabel from '@material-ui/core/InputLabel';
 
 export default class Registerorganization extends React.Component {
   constructor(props) {
@@ -35,6 +36,7 @@ export default class Registerorganization extends React.Component {
             <DialogContentText>
               Please enter the deatils beow to register an Organization
             </DialogContentText>
+
             <TextField
               autoFocus
               margin="dense"

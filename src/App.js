@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AdminDashboard from "./admin/AdminDashboard";
-import ManufacturerDashboard from "./manufacturer/ManufacturerDashboard";
+import ManufacturerDashboard from "./manufacturer2/ManufacturerDashboard";
 import DistributorDashboard from "./distributor/DistributorDashboard";
 import RetailerDashboard from "./retailer/RetailerDashboard";
 import TransporterDashboard from "./transporter/TransporterDashboard";
